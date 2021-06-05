@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HELLO ML pEOPLE</title>
+ <script>
+        function Changeimg(a) {
+            var image = document.getElementById('img');
+            if (a==0) {
+                image.src = "{{url_for('video_feed')}}";
+
+            }
+            else {
+                image.src = "\\static\\sample.jpg";
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>FACE MASK DETECTOR</h1>
+<center>
+<img src="\static\sample.jpg" width="550" height="450" id='img'  ></center>
+<input type="button" name="Start" value="START" onclick="Changeimg(0)">
+<input type="button" name="Stop"value="STOP" onclick="Changeimg(1)" >
+</body>
+</html>
